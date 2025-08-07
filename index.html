@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mental Health Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Assistant</h1>
+        <form method="POST">
+            <textarea name="user_input" placeholder="How are you feeling today?" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if agent_reply %}
+        <div class="response-box">
+            <h2>Assistant's Response:</h2>
+
+            {% if cmd_response %}
+                <div class="agent-section">
+                    <h3>CMD Agent:</h3>
+                    <p>{{ cmd_response }}</p>
+                </div>
+            {% endif %}
+
+            {% if smi_response %}
+                <div class="agent-section">
+                    <h3>SMI Agent:</h3>
+                    <p>{{ smi_response }}</p>
+                </div>
+            {% endif %}
+
+            {% if developmental_response %}
+                <div class="agent-section">
+                    <h3>Developmental Agent:</h3>
+                    <p>{{ developmental_response }}</p>
+                </div>
+            {% endif %}
+
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
