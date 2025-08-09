@@ -16,6 +16,7 @@ from langgraph.graph import StateGraph, END
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage
 from typing import TypedDict
+import google.generativeai as genai
 
 # Set the environment variable first (in Colab or your local shell)
 os.environ["GOOGLE_API_KEY"] = "AIzaSyBX9ru-uviySJCXcah7rl7MW85dsmrP5Nk"
