@@ -232,6 +232,7 @@ workflow.add_edge("developmental", END)
 
 # Compile graph
 app = workflow.compile()
+mental_health_graph=app
 
 def run_chat_loop(app):
     print("🧠 Mental Health Assistant\n")
