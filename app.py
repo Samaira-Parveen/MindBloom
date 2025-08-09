@@ -13,7 +13,7 @@ def index():
     if request.method == "POST":
         user_input = request.form["user_input"]
         state = {"user_input": user_input}
-        response = mental_graph_app.invoke(state)
+        response = mental_health_graph.invoke(state)
 
         cmd_response = response.get("cmd_response", "")
         smi_response = response.get("smi_response", "")
@@ -32,4 +32,5 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
