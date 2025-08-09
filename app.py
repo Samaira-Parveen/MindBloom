@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from mindbloom import app as mental_graph_app  # This should be your LangGraph compiled app
+from mindbloom import app as mental_health_graph # This should be your LangGraph compiled app
 
 app = Flask(__name__)
 
@@ -32,3 +32,4 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
